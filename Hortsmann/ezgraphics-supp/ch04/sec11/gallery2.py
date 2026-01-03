@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+
+plt.axis([0, 749, 0, 349])
+plt.gca().invert_yaxis()
+
+pic = plt.imread('picture1.gif')
+plt.imshow(pic)
+
+pic2 = plt.imread('picture2.gif')
+x = pic.shape[1]
+plt.imshow(pic2, extent=(x, x + pic2.shape[1] - 1, pic2.shape[0] - 1, 0))
+
+plt.show()
